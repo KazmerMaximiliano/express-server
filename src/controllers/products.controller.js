@@ -17,25 +17,26 @@ export const index = async (req, res) => {
 };
 
 export const show = async (req, res) => {
-  const contenedor = new Contenedor();
+  // req.query "?id=1"
+  // req.params "/:id"
+  const { id } = req.params;
 
-  const products = await contenedor.getAll();
-  const randomIndex = Math.floor(Math.random() * (products.length - 1 + 1) + 0);
+  if (id) {
+    const contenedor = new Contenedor();
+    const product = await contenedor.getById(parseInt(id));
 
-  if (products) {
     res.status(200).json({
-      randomProduct: products[randomIndex],
+      product: product,
     });
   } else {
-    res.status(500).json({
-      message: "Internal Server Error",
+    res.status(400).json({
+      message: "Bad Request, missing id",
     });
   }
 };
-
 // CRUD
-// index - GET ALL
-// show - GET
+// index - GET ALL ✅
+// show - GET ✅
 // create - POST
 // update - PUT
 // destroy - DESTROY

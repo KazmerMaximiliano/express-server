@@ -7,6 +7,7 @@ export class Contenedor {
     try {
       const data = await fs.promises.readFile(file, "utf-8");
       const pkgObject = JSON.parse(data);
+
       return pkgObject.array;
     } catch (err) {
       console.log("Error en la lectura completa", err);
@@ -18,9 +19,8 @@ export class Contenedor {
       const data = await fs.promises.readFile(file, "utf-8");
       const pkgObject = JSON.parse(data);
       const itemsID = pkgObject.array.find((e) => e.id === number);
-      {
-        console.log("El producto con el id solicitado es: \n", itemsID);
-      }
+
+      return itemsID;
     } catch (err) {
       console.log("Error en la lectura de id", err);
     }
