@@ -1,54 +1,10 @@
 {
-  "array": [
+  "products": [
     {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 1
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 2
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 3
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 4
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 5
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 6
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 7
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 8
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 9
-    },
-    {
-      "nameproduct": "Cerveza miller",
-      "price": "223",
-      "id": 10
+      "id": 1,
+      "name": "Cerveza miller",
+      "price": 250,
+      "thumbnail": "uploads/miller.png"
     }
   ]
 }
