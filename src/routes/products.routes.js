@@ -3,6 +3,7 @@ import multer from "multer";
 import path from "path";
 import {
   create,
+  destroy,
   index,
   show,
   update,
@@ -25,5 +26,6 @@ router.get("/productos", index);
 router.get("/productos/show/:id", show);
 router.post("/productos/create", upload.single("thumbnail"), create);
 router.put("/productos/update/:id", upload.single("thumbnail"), update);
+router.delete("/productos/delete/:id", destroy);
 
 export default router;

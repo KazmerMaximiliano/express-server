@@ -108,9 +108,35 @@ export const update = async (req, res) => {
   }
 };
 
+export const destroy = async (req, res) => {
+  const { id } = req.params;
+
+  if (id) {
+    const contenedor = new Contenedor();
+
+    contenedor
+      .deleteByID(id)
+      .then(() => {
+        res.status(200).json({
+          message: "Product deleted",
+        });
+      })
+      .catch((err) => {
+        res.status(500).json({
+          message: "Internal Server Error",
+          error: err,
+        });
+      });
+  } else {
+    res.status(400).json({
+      message: "Bad Request, missing id",
+    });
+  }
+};
+
 // CRUD
 // index - GET ALL ✅
 // show - GET ✅
 // create - POST ✅
-// update - PUT
+// update - PUT ✅
 // destroy - DESTROY

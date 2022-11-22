@@ -69,6 +69,10 @@ export class Contenedor {
           let product = parseData.products.find((e) => e.id == id);
 
           if (product) {
+            fs.rmSync(`./${product.thumbnail}`, {
+              force: true,
+            });
+
             product = {
               ...product,
               ...formData,
@@ -98,45 +102,36 @@ export class Contenedor {
     });
   }
 
-  // async deleteById(number) {
-  //   try {
-  //     const data = await fs.promises.readFile(file, "utf-8");
-  //     const pkgObject = JSON.parse(data);
-  //     console.log(pkgObject.array);
-  //     const findElement = pkgObject.array.find((e) => e.id === number);
+  async deleteByID(id) {
+    return new Promise((resolve, reject) => {
+      fs.promises
+        .readFile(file, "utf-8")
+        .then((data) => {
+          const parseData = JSON.parse(data);
+          let product = parseData.products.find((e) => e.id == id);
 
-  //     if (findElement) {
-  //       const elementPosition = pkgObject.array.indexOf(findElement); //devuelve la pos
-  //       pkgObject.array.splice(elementPosition, 1); // desde esa pos, elimino 1 en adelante
-  //     } else {
-  //       console.log("Elemento inexistente ");
-  //     }
+          if (product) {
+            fs.rmSync(`./${product.thumbnail}`, {
+              force: true,
+            });
 
-  //     try {
-  //       await fs.promises.writeFile(file, JSON.stringify(pkgObject, null, 2));
-  //       console.log("Escritura correcta");
-  //     } catch (err) {
-  //       console.log("Error de escritura", err);
-  //     }
-  //   } catch (err) {
-  //     console.log("Error en la lectura de id borrador", err);
-  //   }
-  // }
+            parseData.products = parseData.products.filter((e) => e.id != id);
 
-  // async deleteAll() {
-  //   try {
-  //     const data = await fs.promises.readFile(file, "utf-8");
-  //     const pkgObject = JSON.parse(data);
+            fs.promises
+              .writeFile(file, JSON.stringify(parseData, null, 2))
+              .then(() => {
+                resolve(product.id);
+              })
+              .catch((err) => {
+                reject(err);
+              });
 
-  //     pkgObject.array.splice(0, pkgObject.array.length);
-  //     try {
-  //       await fs.promises.writeFile(file, JSON.stringify(pkgObject, null, 2));
-  //       console.log("Escritura correcta");
-  //     } catch (err) {
-  //       console.log("Error de escritura", err);
-  //     }
-  //   } catch (err) {
-  //     console.log("Error de escritura", err);
-  //   }
-  // }
+            resolve("Product deleted");
+          }
+        })
+        .catch((err) => {
+          reject(err);
+        });
+    });
+  }
 }
