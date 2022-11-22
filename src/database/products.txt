@@ -4,7 +4,139 @@
       "id": 1,
       "name": "Cerveza miller",
       "price": 250,
-      "thumbnail": "uploads/miller.png"
+      "thumbnail": "public/images/miller.png"
+    },
+    {
+      "id": 2,
+      "name": "Antares Kolsh",
+      "price": 300,
+      "thumbnail": "public/images/1669160362645.png"
+    },
+    {
+      "id": 3,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160523007.png"
+    },
+    {
+      "id": 4,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160523678.png"
+    },
+    {
+      "id": 5,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160524270.png"
+    },
+    {
+      "id": 6,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160524775.png"
+    },
+    {
+      "id": 7,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160525209.png"
+    },
+    {
+      "id": 8,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160525655.png"
+    },
+    {
+      "id": 9,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160526065.png"
+    },
+    {
+      "id": 10,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160526537.png"
+    },
+    {
+      "id": 11,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160526905.png"
+    },
+    {
+      "id": 12,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160527293.png"
+    },
+    {
+      "id": 13,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160527690.png"
+    },
+    {
+      "id": 14,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160528072.png"
+    },
+    {
+      "id": 15,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160528479.png"
+    },
+    {
+      "id": 16,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160528833.png"
+    },
+    {
+      "id": 17,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160529211.png"
+    },
+    {
+      "id": 18,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160529603.png"
+    },
+    {
+      "id": 19,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160529991.png"
+    },
+    {
+      "id": 20,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160530352.png"
+    },
+    {
+      "id": 21,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160530761.png"
+    },
+    {
+      "id": 22,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160531079.png"
+    },
+    {
+      "id": 23,
+      "name": "Cerveza Antares",
+      "price": 300,
+      "thumbnail": "public/images/1669160531419.png"
     }
   ]
 }
